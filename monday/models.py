@@ -92,6 +92,15 @@ class Project(models.Model):
     plumbing_design_start_date = models.DateField(null=True, blank=True)
     plan_delivery_date = models.DateField(null=True, blank=True)
     modification_price = models.FloatField(null=True, blank=True)
+
+    deed = models.FileField(upload_to="static/deeds/", null=True, blank=True)
+    identity = models.FileField(upload_to="static/identities/", null=True, blank=True)
+    land_survey = models.FileField(upload_to="static/land_surveys/", null=True, blank=True)
+    soil_test = models.FileField(upload_to="static/soil_tests/", null=True, blank=True)
+    client_form = models.FileField(upload_to="static/client_forms/", null=True, blank=True)
+    old_license = models.FileField(upload_to="static/old_licenses/", null=True, blank=True)
+    civil_defense = models.FileField(upload_to="static/civil_defenses/", null=True, blank=True)
+    water_authority = models.FileField(upload_to="static/water_authorities/", null=True, blank=True)
     
 
     def __str__(self):
@@ -101,7 +110,7 @@ class Comment(models.Model):
     title = models.CharField(max_length=100, null=True, blank=True)
     content = models.TextField(max_length=255, null=True, blank=True)
     written_at = models.DateField(null=True, blank=True)
-    attachment = models.FileField(upload_to="attachments/", null=True, blank=True)
+    attachment = models.FileField(upload_to="static/attachments/", null=True, blank=True)
     written_by = models.ForeignKey(Employee, on_delete=models.SET_NULL, null=True, blank=True)
     written_for = models.ForeignKey(Project, on_delete=models.SET_NULL, null=True, blank=True)
 
