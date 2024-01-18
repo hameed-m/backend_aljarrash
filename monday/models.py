@@ -102,6 +102,16 @@ class Project(models.Model):
     civil_defense = models.FileField(upload_to="static/civil_defenses/", null=True, blank=True)
     water_authority = models.FileField(upload_to="static/water_authorities/", null=True, blank=True)
     
+    deed = models.FileField(upload_to="deeds/", null=True, blank=True)
+    identity = models.FileField(upload_to="identities/", null=True, blank=True)
+    land_survey = models.FileField(upload_to="land_surveys/", null=True, blank=True)
+    soil_test = models.FileField(upload_to="soil_tests/", null=True, blank=True)
+    client_form = models.FileField(upload_to="client_forms/", null=True, blank=True)
+    old_license = models.FileField(upload_to="old_licenses/", null=True, blank=True)
+    civil_defense = models.FileField(upload_to="civil_defenses/", null=True, blank=True)
+    water_authority = models.FileField(upload_to="water_authorities/", null=True, blank=True)
+
+    
 
     def __str__(self):
         return self.name
