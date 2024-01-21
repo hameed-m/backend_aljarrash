@@ -2,6 +2,7 @@ from .models import Employee, Client, Project, Comment
 from .serializers import EmployeeSerializer, ClientSerializer, ProjectSerializer, CommentSerializer
 
 from rest_framework.viewsets import ModelViewSet
+from django_filters.rest_framework import DjangoFilterBackend
 
 # Create your views here.
 class EmployeesViewSet(ModelViewSet):
