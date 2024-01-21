@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'monday',
 
     'rest_framework',
-    
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -78,11 +78,12 @@ TEMPLATES = [
     },
 ]
 
-# REST_FRAMEWORK = {
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
 #     'DEFAULT_PERMISSION_CLASSES': [
 #         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
 #     ]
-# }
+}
 
 WSGI_APPLICATION = 'backend.wsgi.application'
 
