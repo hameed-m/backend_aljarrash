@@ -40,7 +40,7 @@ class ProjectSerializer(serializers.ModelSerializer):
         return obj.electrical_eng.first_name
     
     def get_client_phone_number(self, obj):
-        if(obj.client_id == None):
+        if(obj.client_number == None):
             return None
         return obj.client_number.phone_number
 
