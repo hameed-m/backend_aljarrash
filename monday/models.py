@@ -105,7 +105,7 @@ class Project(models.Model):
     water_authority = models.FileField(upload_to="static/water_authorities/", null=True, blank=True)
 
     def __str__(self):
-        return self.name
+        return self.project_name
 
 class Comment(models.Model):
     title = models.CharField(max_length=100, null=True, blank=True)
