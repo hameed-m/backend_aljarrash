@@ -17,7 +17,7 @@ class ProjectSerializer(serializers.ModelSerializer):
     design_eng_name = serializers.SerializerMethodField()
     structural_eng_name = serializers.SerializerMethodField()
     electrical_eng_name = serializers.SerializerMethodField()
-    client_number = serializers.SerializerMethodField()
+    # client_number = serializers.SerializerMethodField()
     
     class Meta:
         model = Project
@@ -39,10 +39,10 @@ class ProjectSerializer(serializers.ModelSerializer):
             return None
         return obj.electrical_eng.first_name
     
-    def get_client_number(self, obj):
-        if(obj.client_id == None):
-            return None
-        return obj.client_id.phone_number
+    # def get_client_number(self, obj):
+    #     if(obj.client_id == None):
+    #         return None
+    #     return obj.client_id.phone_number
 
 
 class CommentSerializer(serializers.ModelSerializer):
