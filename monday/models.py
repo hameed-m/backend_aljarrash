@@ -68,7 +68,7 @@ class Project(models.Model):
     structural_status = models.CharField(max_length=100, choices=Status.choices, null=True, blank=True)
     plumbing_status = models.CharField(max_length=100, choices=Status.choices, null=True, blank=True)
     electrical_status = models.CharField(max_length=100, choices=Status.choices, null=True, blank=True)
-    client_id = models.ForeignKey(Client, on_delete=models.SET_NULL, related_name='client', null=True, blank=True)
+    client_number = models.ForeignKey(Client, on_delete=models.SET_NULL, related_name='client', null=True, blank=True)
     sketch_approval_date = models.DateField(null=True, blank=True)
     columns_approval_date = models.DateField(null=True, blank=True)
     typeof_follow_up = models.CharField(max_length=100, choices=FollowUpTypes.choices, null=True, blank=True)
