@@ -11,6 +11,8 @@ class Client(models.Model):
     phone = models.CharField(max_length=13, null=True, blank=True)
 
     def __str__(self):
+        if self.name == None:
+            return ""
         return self.name
 
 class ProjectTypes(models.TextChoices):
@@ -118,5 +120,7 @@ class Comment(models.Model):
     written_for = models.ForeignKey(Project, on_delete=models.SET_NULL, null=True, blank=True)
 
     def __str__(self):
+        if self.title == None:
+            return ""
         return self.title
     
