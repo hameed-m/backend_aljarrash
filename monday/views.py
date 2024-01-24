@@ -18,7 +18,7 @@ class ProjectsViewSet(ModelViewSet):
     serializer_class = ProjectSerializer
     filter_backends = [DjangoFilterBackend]
 
-    filter_fields = ['stage']
+    filterset_fields = ['stage']
 
 class CommentsViewSet(ModelViewSet):
     queryset = Comment.objects.all()
