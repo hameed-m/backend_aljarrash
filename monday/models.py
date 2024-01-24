@@ -105,6 +105,8 @@ class Project(models.Model):
     water_authority = models.FileField(upload_to="static/water_authorities/", null=True, blank=True)
 
     def __str__(self):
+        if self.project_name == None:
+            return ""
         return self.project_name
 
 class Comment(models.Model):
