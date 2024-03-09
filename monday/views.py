@@ -1,5 +1,5 @@
-from .models import Employee, Client, Project, Comment
-from .serializers import EmployeeSerializer, ClientSerializer, ProjectSerializer, CommentSerializer
+from .models import Employee, Client, Project, Comment, TableView
+from .serializers import EmployeeSerializer, ClientSerializer, ProjectSerializer, CommentSerializer, TableViewSerializer
 
 from rest_framework.viewsets import ModelViewSet
 from django_filters.rest_framework import DjangoFilterBackend
@@ -23,3 +23,7 @@ class ProjectsViewSet(ModelViewSet):
 class CommentsViewSet(ModelViewSet):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
+
+class TableViewViewSet(ModelViewSet):
+    queryset = TableView.objects.all()
+    serializer_class = TableViewSerializer

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Employee, Client, Project, Comment
+from .models import Employee, Client, Project, Comment, TableView
 
 class EmployeeSerializer(serializers.ModelSerializer):
     class Meta:
@@ -50,3 +50,8 @@ class CommentSerializer(serializers.ModelSerializer):
         model = Comment
         fields = "__all__"
         # fields = []
+
+class TableViewSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TableView
+        fields = "__all__"
