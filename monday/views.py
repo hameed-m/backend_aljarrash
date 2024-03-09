@@ -23,4 +23,3 @@ class ProjectsViewSet(ModelViewSet):
 class CommentsViewSet(ModelViewSet):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
-
