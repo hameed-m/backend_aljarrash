@@ -2,8 +2,8 @@ from .models import Employee, Client, Project, Comment, TableView
 from .serializers import EmployeeSerializer, ClientSerializer, ProjectSerializer, CommentSerializer, TableViewSerializer
 
 from rest_framework.viewsets import ModelViewSet
-from rest_framework.views import APIView
-from rest_framework.response import Response
+# from rest_framework.views import APIView
+# from rest_framework.response import Response
 from django_filters.rest_framework import DjangoFilterBackend
 
 # Create your views here.
@@ -30,9 +30,11 @@ class TableViewViewSet(ModelViewSet):
     queryset = TableView.objects.all()
     serializer_class = TableViewSerializer
 
+    filterset_fields = ['employee', 'stage']
+
 
 # Learn Authentication
-class HelloView(APIView):
-    def get(self, request):
-        content = {'message': 'Hello, World!'}
-        return Response(content)
+# class HelloView(APIView):
+#     def get(self, request):
+#         content = {'message': 'Hello, World!'}
+#         return Response(content)
