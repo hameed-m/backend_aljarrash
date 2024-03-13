@@ -9,4 +9,4 @@ router.register("projects", views.ProjectsViewSet)
 router.register("comments", views.CommentsViewSet)
 router.register("table_views", views.TableViewViewSet)
 
-urlpatterns = router.urls
+urlpatterns = router.urls + []
