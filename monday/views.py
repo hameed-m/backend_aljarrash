@@ -34,7 +34,7 @@ class TableViewViewSet(ModelViewSet):
 
 
 # Learn Authentication
-# class HelloView(APIView):
-#     def get(self, request):
-#         content = {'message': 'Hello, World!'}
-#         return Response(content)
+class HelloView(APIView):
+    def get(self, request):
+        content = {'message': 'Hello, World!'}
+        return Response(content)
