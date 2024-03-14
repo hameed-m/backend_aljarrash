@@ -9,14 +9,20 @@ from django_filters.rest_framework import DjangoFilterBackend
 
 # Create your views here.
 class EmployeesViewSet(ModelViewSet):
+    permission_classes = (IsAuthenticated,)
+    
     queryset = Employee.objects.all()
     serializer_class = EmployeeSerializer
 
 class ClientsViewSet(ModelViewSet):
+    permission_classes = (IsAuthenticated,)
+
     queryset = Client.objects.all()
     serializer_class = ClientSerializer
 
 class ProjectsViewSet(ModelViewSet):
+    permission_classes = (IsAuthenticated,)
+
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
     filter_backends = [DjangoFilterBackend]
@@ -24,10 +30,14 @@ class ProjectsViewSet(ModelViewSet):
     filterset_fields = ['stage']
 
 class CommentsViewSet(ModelViewSet):
+    permission_classes = (IsAuthenticated,)
+
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
 
 class TableViewViewSet(ModelViewSet):
+    permission_classes = (IsAuthenticated,)
+
     queryset = TableView.objects.all()
     serializer_class = TableViewSerializer
 
