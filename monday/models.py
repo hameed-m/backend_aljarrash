@@ -128,6 +128,6 @@ class TableView(models.Model):
     name = models.CharField(max_length=100, null=True, blank=True)
     employee = models.ForeignKey(Employee, on_delete=models.SET_NULL, null=True, blank=True)
     stage = models.CharField(max_length=100, choices=Stages.choices, null=False, blank=False)
-    view = models.CharField(max_length=50, null=True, blank=True)
+    view = models.CharField(max_length=60, null=True, blank=True, validators=[minLengthValidator(60)])
 
     

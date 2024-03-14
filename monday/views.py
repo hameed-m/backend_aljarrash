@@ -4,6 +4,7 @@ from .serializers import EmployeeSerializer, ClientSerializer, ProjectSerializer
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
 from django_filters.rest_framework import DjangoFilterBackend
 
 # Create your views here.
@@ -35,6 +36,8 @@ class TableViewViewSet(ModelViewSet):
 
 # Learn Authentication
 class HelloView(APIView):
+    permission_classes = (IsAuthenticated,)
+
     def get(self, request):
         content = {'message': 'Hello, World!'}
         return Response(content)
