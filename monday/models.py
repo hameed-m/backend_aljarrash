@@ -46,19 +46,18 @@ class StructuralReviewStatus(models.TextChoices):
 class Stages(models.TextChoices):
     Sketch = 1
     Sketch_Review = 2
-    Approval_Before_Columns = 3
-    Awaiting_Client_Approval_on_Columns = 4
-    Implementation_Phase = 5
-    Project_Review_in_AutoCAD = 6
-    Ready_for_Printing_After_Review = 7
-    Review_and_Sign_the_Review_Copy = 8
-    Ready_to_Receive_the_Review_Copy = 9
-    Client_Received_the_Review_Copy = 10
-    Modifying_Clients_Notes = 11
+    Awaiting_Client_Approval = 3
+    Execution_Stage = 4
+    AutoCAD_Review = 5
+    Ready_to_Print = 6
+    Validate_Sign_Review_Copy = 7
+    Ready_to_Collect = 8
+    Client_Received_Copy = 9
+    Edit_Client_Notes = 10
+    License_Issuance = 11
     Ready_for_Final_Receipt = 12
-    Awaiting_Completion_of_the_Plans = 13
-    Completed_Projects = 14
-    Inactive_Projects = 15
+    Completed_Projects = 13
+    Inactive_Projects = 14
 
 
 
